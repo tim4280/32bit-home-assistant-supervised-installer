@@ -102,12 +102,18 @@ dpkg -i os-agent-i386.deb
 
 Step 5: Start script to install Home Assisistant Supervised:
 
-For script access ask it's author [https://t.me/avkulikoff](https://t.me/avkulikoff)
+**Important!!!! Only ethernet connections allowed.**
+
+Later you can change it at: Settings -System - Network
+
+
 ```bash
 ...
 ...
 ...
 ```
+*For script access support author:*   [![Donate](https://img.shields.io/badge/donate-Pizza-yellow.svg)](https://www.buymeacoffee.com/ntguest) [![Donate](https://img.shields.io/badge/donate-Yandex-blueviolet.svg)](https://sobe.ru/na/E2O2B0J57276) *or* [![Donate](https://img.shields.io/badge/Ask-Telegram-blue.svg)](https://t.me/avkulikoff)
+
 
 Also supported next Machine types:
 ```
