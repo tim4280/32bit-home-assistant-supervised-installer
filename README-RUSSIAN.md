@@ -127,13 +127,19 @@ dpkg -i os-agent-i386.deb
 
 Шаг 5: Запустите скрипт установки Home Assisistant Supervised:
 
+**ВАЖНО!!!!   Подключение должно быть ТОЛЬКО по кабелю.**
 
-Для доступа к гарантированно рабочему скрипту обращайтесь к автору [https://t.me/avkulikoff](https://t.me/avkulikoff)
+Переключиться на беспроводное соединение можно позже в разделе: Настройки - Система- Сеть
 ```bash
 ...
 ...
 ...
 ```
+
+*Для доступа к гарантированно рабочему скрипту поддержите автора:* [![Donate](https://img.shields.io/badge/donate-Yandex-blueviolet.svg)](https://sobe.ru/na/E2O2B0J57276) 
+[![Donate](https://img.shields.io/badge/donate-Pizza-yellow.svg)](https://www.buymeacoffee.com/ntguest)
+   *или*   [![Donate](https://img.shields.io/badge/написать-Telegram-blue.svg)](https://t.me/avkulikoff)
+
 
 Также этот скрипт можно использовать и для других типов машин
 ```
