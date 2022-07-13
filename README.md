@@ -35,7 +35,7 @@ This guide for 32bit systems but you can use it and for other types.
   <summary> If you would like a step by step guide on how to install Debian 11 to your machine, click here to expand for instructions. </summary>
 
 
-**1.1)** Start by downloading `mini.iso` from [HERE](https://deb.debian.org/debian/dists/Debian11.3/main/installer-i386/current/images/netboot/mini.iso). If you would prefer the full Debain image with all drivers, download `firmware-11.3.0-i386-DVD-1.iso` [HERE](https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/current/i386/iso-dvd/firmware-11.3.0-i386-DVD-1.iso)
+**1.1)** Start by downloading `mini.iso` from [HERE](https://deb.debian.org/debian/dists/Debian11.4/main/installer-i386/current/images/netboot/mini.iso). If you would prefer the full Debain image with all drivers, download `firmware-11.4.0-i386-DVD-1.iso` [HERE](https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/current/i386/iso-dvd/firmware-11.4.0-i386-DVD-1.iso)
 
 **1.2)** While Debian is downloading, you will need some other programs to help with the setup and installation. To burn the Debian ISO image to a USB thumb drive, you will use a program called Rufus which can be downloaded from [HERE](https://rufus.ie/). 
 
