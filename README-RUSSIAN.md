@@ -95,44 +95,21 @@ Home Assistant - это экосистема домашней автоматиз
 
 ## Раздел 2 - Установка Home Assistant Supervised
 
-Шаг 1: Установите следующие зависимости с помощью этих команд:
+Шаг 1: Переключитесь на учетную запись администратора и обновите систему:
 
 ```bash
 su -
 ```
 ```bash
-apt update && apt upgrade -y && apt autoremove -y
-apt-get install software-properties-common apparmor-utils apt-transport-https ca-certificates curl dbus jq network-manager wget udisks2 libglib2.0-bin unzip -y
+apt update && apt upgrade -y && apt autoremove && apt-get install curl -y
 ```
 
-Шаг 2: Остановите и отключите Modem Manager:
-
-```bash
-systemctl disable ModemManager
-systemctl stop ModemManager
-```
-
-Шаг 3: Установите Docker-IO:
-
-```bash
-apt install -y docker.io
-```
-
-Шаг 4: Установите OS-Agent:
-
-```bash
-curl -s https://api.github.com/repos/home-assistant/os-agent/releases/latest | grep "browser_download_url.*i386\.deb" | cut -d : -f 2,3 | tr -d \" | wget -O os-agent-i386.deb -i - 
-dpkg -i os-agent-i386.deb
-```
-
-Шаг 5: Запустите скрипт установки Home Assisistant Supervised:
+Шаг 2: Запустите скрипт установки Home Assisistant Supervised:
 
 **ВАЖНО!!!!   Подключение должно быть ТОЛЬКО по кабелю.**
 
 Переключиться на беспроводное соединение можно позже в разделе: Настройки - Система- Сеть
 ```bash
-...
-...
 ...
 ```
 
@@ -141,26 +118,36 @@ dpkg -i os-agent-i386.deb
    *или*   [![Donate](https://img.shields.io/badge/написать-Telegram-blue.svg)](https://t.me/avkulikoff)
 
 
-Также этот скрипт можно использовать и для других типов машин
+Вы можете запускать скрипт без каких-либо параметров или указать явно свое устройтво с помощью опции -m :
 ```
-- generic-x86-64
-- odroid-c2
-- odroid-n2
-- odroid-xu
-- qemuarm
-- qemuarm-64
-- qemux86
-- qemux86-64
-- raspberrypi
-- raspberrypi2
-- raspberrypi3
-- raspberrypi4
-- raspberrypi3-64
-- raspberrypi4-64
-- tinker
-- khadas-vim3
+qemux86
+qemux86-64
+qemuarm
+qemuarm-64
+generic-x86-64
+intel-nuc
+khadas-vim3
+raspberrypi
+raspberrypi2
+raspberrypi3
+raspberrypi3-64
+raspberrypi4
+raspberrypi4-64
+yellow
+tinker
+odroid-c2
+odroid-c4
+odroid-n2
+odroid-xu
+opi32
+opi64
+opiz2
 ```  
-Следуйте инструкциям на экране
+И установить свою папку для файлов Home Assistant помощью опции -d
+
+После окончания выполнения скрипта необходимо перезагрузить устройство
+
+[![Youtube](https://img.youtube.com/vi/TMbYrZFUw4w/0.jpg)](https://youtu.be/TMbYrZFUw4w)
 
 ## Раздел 3 - Установка ESPHome
 
@@ -260,27 +247,7 @@ systemctl restart esphome.service
   ```
 </details>
 
-## Раздел 4 - Установка HACS
-
-Здесь совсем все просто. Дождитесь появления окна установки пароля Ноme Assistant. Можно ничего не вводить, переключиться обратно в терминал и:
-
-```bash
-curl -sfSL https://hacs.xyz/install | bash -
-reboot
-```
-
-Система перезагрузится, а HACS будет находиться в разделе интеграции. 
-
-
 ## Теперь можно вводить пользователя и пользоваться
-
-<details>
-<summary> Вот, что в итоге должно получиться  </summary> 
-
-  ![image](https://user-images.githubusercontent.com/69485846/144156382-cf0f055c-edfe-4bc2-aa84-bef95268eb70.png)
-  ![image](https://user-images.githubusercontent.com/69485846/144156782-8f31cd4b-b046-4622-a6ef-6a286027bc26.png)
-
-  </details>
   
   
 Ну и конечно не забываем [<img src="https://www.buymeacoffee.com/assets/img/guidelines/download-assets-2.svg" alt="BuyMeACoffee" width="100">](https://www.buymeacoffee.com/ntguest)    или    [<img src="https://hsto.org/getpro/geektimes/post_images/7a9/b88/258/7a9b882584c6ea6ed1f48e96be00a187.png" width="100">](https://yoomoney.ru/to/410011383527168)
