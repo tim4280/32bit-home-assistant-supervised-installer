@@ -76,31 +76,10 @@ Step 1: First you will start by updating the Debian OS to make sure all the late
 su -
 ```
 ```bash
-apt update && apt upgrade -y && apt autoremove -y
-apt-get install software-properties-common apparmor-utils apt-transport-https ca-certificates curl dbus jq network-manager wget udisks2 libglib2.0-bin unzip -y
+apt update && apt upgrade -y && apt autoremove && apt-get install curl -y
 ```
 
-Step 2: Stop and disable Modem Manager:
-
-```bash
-systemctl disable ModemManager
-systemctl stop ModemManager
-```
-
-Step 3: Install Docker-IO:
-
-```bash
-apt install -y docker.io
-```
-
-Step 4: Install OS-Agent:
-
-```bash
-curl -s https://api.github.com/repos/home-assistant/os-agent/releases/latest | grep "browser_download_url.*i386\.deb" | cut -d : -f 2,3 | tr -d \" | wget -O os-agent-i386.deb -i - 
-dpkg -i os-agent-i386.deb
-```
-
-Step 5: Start script to install Home Assisistant Supervised:
+Step 2: Start script to install Home Assisistant Supervised:
 
 **Important!!!! Only ethernet connections allowed.**
 
@@ -109,32 +88,40 @@ Later you can change it at: Settings -System - Network
 
 ```bash
 ...
-...
-...
 ```
 *For script access support author:*   [![Donate](https://img.shields.io/badge/donate-Pizza-yellow.svg)](https://www.buymeacoffee.com/ntguest) [![Donate](https://img.shields.io/badge/donate-Yandex-blueviolet.svg)](https://sobe.ru/na/E2O2B0J57276) *or* [![Donate](https://img.shields.io/badge/Ask-Telegram-blue.svg)](https://t.me/avkulikoff)
 
 
-Also supported next Machine types:
+You can run script without any options or specify your machine type by option -m :
 ```
-- generic-x86-64
-- odroid-c2
-- odroid-n2
-- odroid-xu
-- qemuarm
-- qemuarm-64
-- qemux86
-- qemux86-64
-- raspberrypi
-- raspberrypi2
-- raspberrypi3
-- raspberrypi4
-- raspberrypi3-64
-- raspberrypi4-64
-- tinker
-- khadas-vim3
+qemux86
+qemux86-64
+qemuarm
+qemuarm-64
+generic-x86-64
+intel-nuc
+khadas-vim3
+raspberrypi
+raspberrypi2
+raspberrypi3
+raspberrypi3-64
+raspberrypi4
+raspberrypi4-64
+yellow
+tinker
+odroid-c2
+odroid-c4
+odroid-n2
+odroid-xu
+opi32
+opi64
+opiz2
 ```  
-Follow instructions
+And specify Home Assistant data folder by option -d
+
+Reboot is required to apply changes
+
+[![Youtube](https://img.youtube.com/vi/eo-BokxxmH8/0.jpg)](https://youtu.be/eo-BokxxmH8)
 
 ## Section 3 - Install ESPHome
 
@@ -234,21 +221,8 @@ systemctl restart esphome.service
   ```
 </details>
 
-## Section 4 - Install HACS
-
-It's really simle. Wait until the window for set Home Assistant user and password will appears. You can enter nothing, switch back to the terminal and:
-
-```bash
-curl -sfSL https://hacs.xyz/install | bash -
-reboot
-```
-
-System will reboot and you can find HACS in integrations. 
-
 
 ## Now system is ready to go. Enjoy)
 
   
 And of course don't forget [<img src="https://www.buymeacoffee.com/assets/img/guidelines/download-assets-2.svg" alt="BuyMeACoffee" width="100">](https://www.buymeacoffee.com/ntguest)    or    [<img src="https://hsto.org/getpro/geektimes/post_images/7a9/b88/258/7a9b882584c6ea6ed1f48e96be00a187.png" width="100">](https://yoomoney.ru/to/410011383527168)
-
-My great thanks to [Kanga-Who](https://github.com/Kanga-Who/home-assistant)
