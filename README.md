@@ -121,7 +121,7 @@ And specify Home Assistant data folder by option -d
 
 Reboot is required to apply changes
 
-[![Youtube](https://img.youtube.com/vi/eo-BokxxmH8/0.jpg)](https://youtu.be/eo-BokxxmH8)
+[![Youtube](https://img.youtube.com/vi/DqlCx-hnWkE/0.jpg)](https://youtu.be/DqlCx-hnWkE)
 
 ## Section 3 - Install ESPHome
 
