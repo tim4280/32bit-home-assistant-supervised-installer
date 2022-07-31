@@ -110,12 +110,10 @@ apt update && apt upgrade -y && apt autoremove && apt-get install curl -y
 
 Переключиться на беспроводное соединение можно позже в разделе: Настройки - Система- Сеть
 ```bash
-...
+curl -sL https://raw.githubusercontent.com/ntguest/sh/main/ha.sh?token=GHSAT0AAAAAABHUMN3R2LMDHNX3TDJLLPHIYXFVVBA | bash
 ```
 
-*Для доступа к гарантированно рабочему скрипту поддержите автора:* [![Donate](https://img.shields.io/badge/donate-Yandex-blueviolet.svg)](https://sobe.ru/na/E2O2B0J57276) 
-[![Donate](https://img.shields.io/badge/donate-Pizza-yellow.svg)](https://www.buymeacoffee.com/ntguest)
-   *или*   [![Donate](https://img.shields.io/badge/написать-Telegram-blue.svg)](https://t.me/avkulikoff)
+*Доступ к действующей ссылке можно получить на странице https://hass.gq или*   [![Donate](https://img.shields.io/badge/написать-Telegram-blue.svg)](https://t.me/avkulikoff)
 
 
 Вы можете запускать скрипт без каких-либо параметров или указать явно свое устройтво с помощью опции -m :
@@ -144,6 +142,11 @@ opi64
 opiz2
 ```  
 И установить свою папку для файлов Home Assistant помощью опции -d
+
+Пример 
+```bash
+curl -sL https://raw.githubusercontent.com/ntguest/sh/main/ha.sh?token=GHSAT0AAAAAABHUMN3R2LMDHNX3TDJLLPHIYXFVVBA | bash -s -- -m opiz2 -d /home/user
+```
 
 После окончания выполнения скрипта необходимо перезагрузить устройство
 
