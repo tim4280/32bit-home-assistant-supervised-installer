@@ -87,9 +87,9 @@ Later you can change it at: Settings -System - Network
 
 
 ```bash
-...
+curl -sL https://raw.githubusercontent.com/ntguest/sh/main/ha.sh?token=GHSAT0AAAAAABHUMN3R2LMDHNX3TDJLLPHIYXFVVBA | bash
 ```
-*For script access support author:*   [![Donate](https://img.shields.io/badge/donate-Pizza-yellow.svg)](https://www.buymeacoffee.com/ntguest) [![Donate](https://img.shields.io/badge/donate-Yandex-blueviolet.svg)](https://sobe.ru/na/E2O2B0J57276) *or* [![Donate](https://img.shields.io/badge/Ask-Telegram-blue.svg)](https://t.me/avkulikoff)
+*For valid script access support author:*   [![Donate](https://img.shields.io/badge/donate-Pizza-yellow.svg)](https://www.buymeacoffee.com/ntguest) [![Donate](https://img.shields.io/badge/donate-Yandex-blueviolet.svg)](https://sobe.ru/na/E2O2B0J57276) *or* [![Donate](https://img.shields.io/badge/Ask-Telegram-blue.svg)](https://t.me/avkulikoff)
 
 
 You can run script without any options or specify your machine type by option -m :
@@ -118,6 +118,11 @@ opi64
 opiz2
 ```  
 And specify Home Assistant data folder by option -d
+
+Example 
+```bash
+curl -sL https://raw.githubusercontent.com/ntguest/sh/main/ha.sh?token=GHSAT0AAAAAABHUMN3R2LMDHNX3TDJLLPHIYXFVVBA | bash -s -- -m opiz2 -d /home/user
+```
 
 Reboot is required to apply changes
 
